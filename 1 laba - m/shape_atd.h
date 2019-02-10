@@ -1,6 +1,6 @@
 #ifndef __shape_atd__
 #define __shape_atd__
-// Подключение необходимых типов данных
+// Подключение необходимых типов данны
 #include "box_atd.h"
 #include "share_atd.h"
 namespace simple_shapes {
