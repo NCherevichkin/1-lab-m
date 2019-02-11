@@ -81,6 +81,7 @@
     <ClInclude Include="box_atd.h" />
     <ClInclude Include="shape_atd.h" />
     <ClInclude Include="share_atd.h" />
+    <ClInclude Include="tetra_atd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="conteiners.cpp" />
@@ -88,6 +89,7 @@
     <ClCompile Include="boxes.cpp" />
     <ClCompile Include="shapes.cpp" />
     <ClCompile Include="shares.cpp" />
+    <ClCompile Include="tetras.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
