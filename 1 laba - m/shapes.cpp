@@ -33,6 +33,19 @@ namespace simple_shapes {
   void Out(box &r, ofstream &ofst);
   void Out(share  &t, ofstream &ofst);
 
+  // Вычисление обьема фигур
+  double V(shape &s)
+  {
+	  switch (s.k) {
+	  case shape::key::BOX:
+		  return V(s.r);
+	  case shape::key::SHERE:
+		  return V(s.t);
+	 	  default:
+		  return -1;
+	  }
+  }
+
   // Вывод параметров текущей фигуры в поток
   void Out(shape &s, ofstream &ofst) {
     switch(s.k) {

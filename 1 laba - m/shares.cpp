@@ -14,5 +14,10 @@ namespace simple_shapes {
     ofst << "It is Sphere: r = " 
       << t.rad << endl;
   }
+  // ־בüול 
+  double V(share &t)
+  {
+	  return ((t.rad * t.rad * t.rad * 3.14 * 4) / 3);
+  }
 } // end simple_shapes namespace
 
