@@ -19,15 +19,17 @@ namespace simple_shapes {
       sp = new shape;
       sp->k = shape::key::BOX;
       In(sp->r, ifst);
-      return sp;
+	  break;
     case 2:
       sp = new shape;
       sp->k = shape::key::SHERE;
       In(sp->t, ifst);
-      return sp;
+	  break;
     default:
       return 0;
     }
+	ifst >> sp->temp;
+	return sp;
   }
 
   void Out(box &r, ofstream &ofst);
@@ -45,6 +47,7 @@ namespace simple_shapes {
     default:
       ofst << "Incorrect figure!" << endl;
     }
+	ofst << "Melting point = " << s.temp << " °C " << endl;
   }
 } // end simple_shapes namespace
 
