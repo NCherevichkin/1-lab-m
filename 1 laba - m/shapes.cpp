@@ -32,6 +32,8 @@ namespace simple_shapes {
 
   void Out(box &r, ofstream &ofst);
   void Out(share  &t, ofstream &ofst);
+  double V(share &t);
+  double V(box &r);
 
   // Вычисление обьема фигур
   double V(shape &s)
