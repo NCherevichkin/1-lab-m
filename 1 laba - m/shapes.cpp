@@ -48,6 +48,14 @@ namespace simple_shapes {
 	  }
   }
 
+  // Cравнение ключей двух программных объектов
+	// Сигнатуры требуемых функций
+  double V(shape &s);
+  //-----------------------------------------------------
+  bool Compare(shape *first, shape *second) {
+	  return V(*first) < V(*second);
+  }
+
   // Вывод параметров текущей фигуры в поток
   void Out(shape &s, ofstream &ofst) {
     switch(s.k) {
