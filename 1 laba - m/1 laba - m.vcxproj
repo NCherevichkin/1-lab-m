@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="conteiners.cpp" />
+    <ClCompile Include="conteiners_out.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="boxes.cpp" />
     <ClCompile Include="shapes.cpp" />

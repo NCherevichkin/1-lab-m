@@ -11,6 +11,7 @@ void Init(container &c) ;
 void Clear(container &c);
 void In(container &c, ifstream &ifst) ;
 void Out(container &c, ofstream &ofst) ;
+void OutBox(container &c, ofstream &ofst);
 }
 
 using namespace simple_shapes;
@@ -31,6 +32,7 @@ int main(int argc, char* argv[])
 	In(c, ifst);
     ofst << "Filled container. " << endl;
 	Out(c, ofst);
+	OutBox(c, ofst);
 	Clear(c);
     ofst << "Empty container. " << endl;
 	Out(c, ofst);
