@@ -11,6 +11,7 @@ void Init(container &c) ;
 void Clear(container &c);
 void In(container &c, ifstream &ifst) ;
 void Out(container &c, ofstream &ofst) ;
+void OutBox(container &c, ofstream &ofst);
 void Sort(container &c);
 }
 
@@ -35,6 +36,7 @@ int main(int argc, char* argv[])
 	ofst << "Sorted container." << endl;
 	Sort(c);
 	Out(c, ofst);
+	OutBox(c, ofst);
 	Clear(c);
     ofst << "Empty container. " << endl;
 	Out(c, ofst);
