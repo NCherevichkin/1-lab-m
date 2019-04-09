@@ -19,19 +19,44 @@ namespace simple_shapes {
       sp = new shape;
       sp->k = shape::key::BOX;
       In(sp->r, ifst);
-	  break;
+	  return sp;
     case 2:
       sp = new shape;
       sp->k = shape::key::SHERE;
       In(sp->t, ifst);
       return sp;
+	case 3:
+		sp = new shape;
+		sp->k = shape::key::TETRA;
+		In(sp->f, ifst);
+		return sp;
     default:
       return 0;
     }
   }
 
-  void Out(box &r, ofstream &ofst);
   void Out(share  &t, ofstream &ofst);
+  void Out(box &r, ofstream &ofst);
+  void Out(tetra &f, ofstream &ofst);
+  double V(share &t);
+  double V(box &r);
+  double V(tetra &f);
+
+  // Вычисление обьема фигур
+  double V(shape &s)
+  {
+	  switch (s.k) {
+	  case shape::key::BOX:
+		  return V(s.r);
+	  case shape::key::SHERE:
+		  return V(s.t);
+	  case shape::key::TETRA:
+		  return V(s.f);
+	  default:
+		  return -1;
+	  }
+  }
+
 
   // Вывод параметров текущей фигуры в поток
   void Out(shape &s, ofstream &ofst) {
@@ -43,6 +68,9 @@ namespace simple_shapes {
       Out(s.t, ofst);
       break;
     default:
+	case shape::key::TETRA:
+		Out(s.f, ofst);
+		break;
       ofst << "Incorrect figure!" << endl;
     }
   }
