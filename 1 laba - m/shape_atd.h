@@ -10,6 +10,7 @@ namespace simple_shapes {
     // значения ключей для каждой из фигур
     enum key {BOX, SHERE, TETRA};
     key k; // ключ
+	int temp;
     // используемые альтернативы
     union { // используем включение
       box r;
