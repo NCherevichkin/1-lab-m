@@ -5,6 +5,7 @@
 using namespace std;
 namespace simple_shapes {
 	void Out(shape &s, ofstream &ofst);
+	double V(shape &s);
 
 	//-----------------------------------------------------
 	// Вывод только прямоугольников
@@ -13,7 +14,11 @@ namespace simple_shapes {
 		for (int i = 0; i < c.len; i++) {
 			ofst << i << ": ";
 			if (c.cont[i]->k == shape::BOX)
+			{
 				Out(*(c.cont[i]), ofst);
+				ofst << "V = "
+					<< V(*(c.cont[i])) << endl;
+			}
 			else
 				ofst << endl;
 		}
